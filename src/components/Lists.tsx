@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import List from "./List";
 
 const Lists = () => {
-  return (
-    <div>Lists</div>
-  )
-}
+  const items: string[] = ["Shahriar", "Rahat"];
 
-export default Lists
+  const onClick = (text: string): void => alert(text);
+  return (
+    <div>
+      <List items={items} onClick={onClick} />
+    </div>
+  );
+};
+
+export default Lists;

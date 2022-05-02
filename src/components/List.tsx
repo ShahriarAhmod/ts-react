@@ -1,12 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const List = ({iteams, onclick}: {
-    iteams: string[],
-    onclick: () => void
+const List = ({
+  items,
+  onClick,
+}: {
+  items: string[];
+  onClick: (item: string) => void;
 }) => {
   return (
-    <div>List</div>
-  )
-}
+    <div>
+      {items.map((item, index) => (
+        <li key={index} onClick={() => onClick(item)}>
+          {item}
+        </li>
+      ))}
+    </div>
+  );
+};
 
-export default List
+export default List;
